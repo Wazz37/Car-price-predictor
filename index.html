@@ -1,0 +1,384 @@
+<!doctype>
+<html>
+    <head>
+        <title>Predictor</title>
+        <style>
+    body {
+        background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7e9963be-1de7-4f3c-b2dc-204df427f1f9/dej3inc-7bca725b-d0eb-4dd9-ac84-4adf8b922ca2.jpg/v1/fill/w_1280,h_728,q_75,strp/car_by_younesyounes1380_dej3inc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI4IiwicGF0aCI6IlwvZlwvN2U5OTYzYmUtMWRlNy00ZjNjLWIyZGMtMjA0ZGY0MjdmMWY5XC9kZWozaW5jLTdiY2E3MjViLWQwZWItNGRkOS1hYzg0LTRhZGY4YjkyMmNhMi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.hkdjEkmc68jMxUOo3QetTvrrQd_dNU2HFQ8NcqdJzjs");
+        background-position: center;
+        background-size: cover;
+        font-family: sans-serif;
+        margin-top: 40px;
+    }
+
+    .car-header-main {
+        width: 1000px;
+        font-size:25px;
+        background-color: rgb(0, 0, 0, 1);
+        margin: auto;
+        color: #FFFFFF;
+        padding: 10px 0px 10px 0px;
+        text-align: center;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .car-header {
+        color: white;
+        text-shadow: 3px 3px black;
+        font-size:28px;
+        font-weight:bold;
+        background-color: rgb(0, 0, 0, 0.6);
+        width: 1000px;
+        margin: auto;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .web-body {
+        background-color: rgb(0, 0, 0, 0.5);
+        width: 1000px;
+        margin: auto;
+    }
+
+    form {
+        padding: 30px;
+        padding-bottom:30;
+        margin:0px;
+    }
+
+    .car-detail {
+        background-color: rgb(0.4, 0.4, 0.4, 0.4);
+        color: #FFFFFF;
+        padding: 10px 10px 10px 10px;
+        border-radius: 15px 15px 15px 15px;
+        margin-left: 5px;
+        margin-top: 0px;
+    }
+
+    .company-name {
+        position: relative;
+        left: 250px;
+        top: -50;
+        width: 400px;
+        border-radius: 6px;
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+    .car-model {
+        position: relative;
+        left: 144px;
+        top: -20;
+        width: 400px;
+        border-radius: 6px;
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+    .name-label {
+        position: relative;
+        color: #E5E5E5;
+        text-transform: capitalize;
+        font-size: 14px;
+        left: 250px;
+        top: -60px;
+    }
+
+    .model-label {
+        position: relative;
+        color: #E5E5E5;
+        text-transform: capitalize;
+        font-size: 14px;
+        left: -260px;
+        top: 11px;
+    }
+
+    .car-year {
+        background-color: rgb(0.4, 0.4, 0.4, 0.4);
+        color: #FFFFFF;
+        padding: 10px 10px 10px 10px;
+        border-radius: 15px 15px 15px 15px;
+        margin-left: 5px;
+        margin-top: 30px;
+    }
+
+    .year-group {
+        position: relative;
+        left: 250px;
+        top: -40;
+        width: 400px;
+        border-radius: 6px;
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+    .year-label {
+        position: relative;
+        color: #E5E5E5;
+        text-transform: capitalize;
+        font-size: 14px;
+        left: 250px;
+        top: -35px;
+    }
+
+    .car-fuel {
+        background-color: rgb(0.4, 0.4, 0.4, 0.4);
+        color: #FFFFFF;
+        padding: 10px 10px 10px 10px;
+        border-radius: 15px 15px 15px 15px;
+        margin-left: 5px;
+        margin-top: 30px;
+    }
+
+    .fuel-group {
+        position: relative;
+        left: 250px;
+        top: -40;
+        width: 400px;
+        border-radius: 6px;
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+    .fuel-label {
+        position: relative;
+        color: #E5E5E5;
+        text-transform: capitalize;
+        font-size: 14px;
+        left: 250px;
+        top: -35px;
+    }
+
+    .car-distance {
+        background-color: rgb(0.4, 0.4, 0.4, 0.4);
+        color: #FFFFFF;
+        padding: 10px 10px 10px 10px;
+        border-radius: 15px 15px 15px 15px;
+        margin-left: 5px;
+        margin-top: 30px;
+    }
+
+    .distance-group {
+        position: relative;
+        left: 250px;
+        top: -40;
+        width: 400px;
+        border-radius: 6px;
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+    .distance-label {
+        position: relative;
+        color: #E5E5E5;
+        text-transform: capitalize;
+        font-size: 14px;
+        left: 250px;
+        top: -35px;
+    }
+    .btn{
+        position:relative;
+        display:inline-block;
+        padding:15px 30px;
+        color:#2196f3;
+        text-transform:uppercase;
+        letter-spacing:0px;
+        text-decoration:none;
+        font-size:24px;
+        overflow:hidden;
+        transition0.2s;
+        left: -100;
+        top: 10px;
+        border:0.1px solid white;
+        background-color:black;
+        padding:5px;
+        border-radius:5px;
+        text-shadow:0 0 red;
+
+
+
+    }
+    .btn:hover{
+        color:red;
+        padding:5px;
+        border-radius:5px;
+        border:0.1px solid red;
+        background: #099FFF;
+        box-shadow:0 0 10px #2196f3, 0 0 40px red, 0 0 80px #2196f3;
+        transition-delay:0s;
+    }
+    .btn span{
+        position:absolute;
+        display:block;
+    }
+    .btn span:nth-child(1){
+        top:0;
+        left:-100%;
+        width:100%;
+        height:2px;
+        background:linear-gradient(90deg,transparent,red);
+    }
+    .btn:hover span:nth-child(1){
+        left:100%;
+        transition:1s;
+    }
+    .btn span:nth-child(3){
+        bottom:0;
+        right:-100%;
+        width:100%;
+        height:2px;
+        background:linear-gradient(270deg,transparent,red);
+    }
+    .btn:hover span:nth-child(3){
+        right:100%;
+        transition:1s;
+        transition-delay:0.5s;
+    }
+    .btn span:nth-child(2){
+        top:-100%;
+        right:0;
+        width:2px;
+        height:100%;
+        background:linear-gradient(180deg,transparent,red);
+    }
+    .btn:hover span:nth-child(2){
+        top:100%;
+        transition:1s;
+        transition-delay:0.25s;
+    }
+    .btn span:nth-child(4){
+        bottom:-100%;
+        left:0;
+        width:2px;
+        height:100%;
+        background:linear-gradient(360deg,transparent,red);
+    }
+    .btn:hover span:nth-child(4){
+        bottom:100%;
+        transition:1s;
+        transition-delay:0.75s;
+    }
+    .result{
+        position:relative;
+        display:inline-block;
+        color:red;
+        text-transform:uppercase;
+        letter-spacing:0px;
+        text-decoration:none;
+        font-size:24px;
+        left: 550;
+        top: -77px;
+        border = 1px;
+        border:0.1px solid white;
+        background-color:black;
+        padding:5px;
+        border-radius:5px;
+    }
+
+        </style>
+    </head>
+    <body>
+        <div class="car-header-main"><h1>PRICE  PREDICTOR</h1></div>
+        <div class="car-header">Please enter the following details</div>
+        <div class="web-body">
+            <form method="post" accept-charset="utf-8">
+                <div class="car-detail"><h3>Enter company details</h3>
+                    <select class="company-name" style="height:40px" id="company" name="company" required
+                        onchange="load_car_models(this.id,'car_model')">
+                        {% for company in companies%}
+                            <option value="{{ company }}">{{ company }}</option>
+                        {% endfor %}
+                    </select><br>
+                        <label class="name-label">Select Company</label>
+                    <select class="car-model" style="height:40px" id="car_model" name="car_model" required>
+                    </select>
+                        <label class="model-label">Select car-model</label>
+                </div>
+
+                <div class="car-year"><h3>Enter year of purchase</h3>
+                    <select class="year-group" style="height:40px" id="year" name="year" required>
+                        {% for year in years%}
+                            <option value="{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                    </select><br>
+                        <label class="year-label">Select year</label>
+                </div>
+
+                <div class="car-fuel"><h3>Enter fuel type</h3>
+                    <select class="fuel-group" style="height:40px" id="fuel_type" name="fuel_type" required>
+                        {% for fuel in fuel_type %}
+                        <option value="{{ fuel }}">{{ fuel }}</option>
+                        {% endfor %}
+                    </select><br>
+                        <label class="fuel-label">Select fuel type</label>
+                </div>
+
+                <div class="car-distance"><h3>Enter kilometres driven</h3>
+                    <input class="distance-group" style="height:40px" type="text" id="kms_driven" name="kms_driven" required><br>
+                    <label class="distance-label">Enter Value</label>
+
+                </div>
+
+                <div class="col-md-10 form-group" style="text-align: center">
+                        <button  class="btn btn-primary form-control" onclick="send_data()">Predict Price
+                        <span></span><span></span><span></span><span></span>
+                        </button>
+                </div>
+            </form>
+            <br>
+            <div class="result">
+                <div class="final-result" style="text-align: center">
+                    <span id="prediction"></span>
+                </div>
+            </div>
+        </div>
+    <script>
+    function load_car_models(company_id,car_model_id)
+    {
+        var company=document.getElementById(company_id);
+        var car_model= document.getElementById(car_model_id);
+        console.log(company.value);
+        car_model.value="";
+        car_model.innerHTML="";
+        {% for company in companies %}
+            if( company.value == "{{ company }}")
+            {
+                {% for model in car_model %}
+                    {% if company in model %}
+
+                        var newOption= document.createElement("option");
+                        newOption.value="{{ model }}";
+                        newOption.innerHTML="{{ model }}";
+                        car_model.options.add(newOption);
+                    {% endif %}
+                {% endfor %}
+            }
+        {% endfor %}
+    }
+        function form_handler(event) {
+        event.preventDefault(); // Don't submit the form normally
+    }
+    function send_data()
+    {
+        document.querySelector('form').addEventListener("submit",form_handler);
+
+        var fd=new FormData(document.querySelector('form'));
+
+        var xhr= new XMLHttpRequest({mozSystem: true});
+
+        xhr.open('POST','/predict',true);
+        document.getElementById('prediction').innerHTML="Wait! Predicting Price.....";
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                document.getElementById('prediction').innerHTML="₹"+xhr.responseText;
+            }
+        };
+
+        xhr.onload= function(){};
+        xhr.send(fd);
+    }
+    </script>
+
+
+    </body>
+</html>
